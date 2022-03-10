@@ -1,5 +1,5 @@
 Requerments:
-01. Heard Reaction option dosn`t work.
+01. Heard Reaction option dosn`t work. (Done)
 02. User profile picture doesn`t work.
 03. post description can not show if less then 30 caracter.
 04. User & user comment doesn`t show.
