@@ -17,7 +17,7 @@ const isLiked = (id) => {
 
 const addToLiked = (id) => {
   if (!likedPostsId.includes(id)) {
-    likedPostsId.push(id);
+    likedPostsId.push(id); // Problem-01:There will be no plus, will push.(Done)
   }
   showPosts(posts);
 };
@@ -32,7 +32,7 @@ const reportPost = (id) => {
 
 const displayContent = (text) => {
   return text.length < 30
-    ? text
+    ? text // Problem-03: There will be text without qutetion. (Done)
     : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
@@ -57,7 +57,6 @@ const switchTab = (id) => {
 };
 
 const createPost = (post) => {
-  console.log(post);
   const image = post.image;
   const div = document.createElement("article");
   div.classList.add("post");
@@ -70,6 +69,7 @@ const createPost = (post) => {
                     class="post__avatar"
                   >
                     <img src="${post.userImage}" alt="User Picture" />
+                    <!-- Problem-02: There will be post.userImage. not only image (Done) -->
                   </a>
                   <a href="#" class="post__user">phero</a>
                 </div>
@@ -135,6 +135,7 @@ const createPost = (post) => {
                       </a>
                       ${post.comments[0]?.text}
                     </small>
+                    <!-- Problem-04: There will be comments[0] (Done) -->
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
                 </div>
@@ -155,7 +156,10 @@ const showPosts = (posts) => {
 
 const displayLikedPosts = () => {
   const likePsotContainer = document.getElementById("liked");
-  likePsotContainer.innerHTML = "";
+  // Problem-06: Clear previse liked post. (Done)
+  while (likePsotContainer.children.length > 1) {
+    likePsotContainer.removeChild(likePsotContainer.lastChild);
+  }
   const likedPosts = getLikedPosts();
   likedPosts.forEach((post) => {
     const div = createPost(post);
@@ -165,8 +169,12 @@ const displayLikedPosts = () => {
 
 const displayReportedPosts = () => {
   const repotedPostContainer = document.getElementById("reported");
-  repotedPostContainer.innerHTML = "";
+  // Problem-06: Clear previse Reported post. (Done)
+  while (repotedPostContainer.children.length > 1) {
+    repotedPostContainer.removeChild(repotedPostContainer.lastChild);
+  }
   const reportedPosts = getReportedPosts();
+  // Problem-05: There will be reportedPosts Not Post. (Done)
   reportedPosts.forEach((post) => {
     const div = createPost(post);
     repotedPostContainer.appendChild(div);
