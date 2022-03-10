@@ -12,3 +12,4 @@ Requerments:
 01. how does javaScript work?
 02. what is javaScript event loop?
 03. Difference between local storage & session storage.
+

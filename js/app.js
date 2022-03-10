@@ -156,7 +156,7 @@ const showPosts = (posts) => {
 
 const displayLikedPosts = () => {
   const likePsotContainer = document.getElementById("liked");
-  // Problem-06: Clear previse liked post. (Done)
+  // Problem-06: Clear previse liked post without defoult h1 tag. (Done)
   while (likePsotContainer.children.length > 1) {
     likePsotContainer.removeChild(likePsotContainer.lastChild);
   }
@@ -169,7 +169,7 @@ const displayLikedPosts = () => {
 
 const displayReportedPosts = () => {
   const repotedPostContainer = document.getElementById("reported");
-  // Problem-06: Clear previse Reported post. (Done)
+  // Problem-06: Clear previse Reported post without defoult h1 tag. (Done)
   while (repotedPostContainer.children.length > 1) {
     repotedPostContainer.removeChild(repotedPostContainer.lastChild);
   }
@@ -188,3 +188,26 @@ const loadPosts = async () => {
 };
 
 loadPosts();
+
+// Optional JavaScipt Code
+
+const copyElementText = (id, btn) => {
+  const text = document.getElementById(id);
+  text.style.border = "2px solid blue";
+  const textValue = text.innerText;
+
+  const element = document.createElement("textarea");
+  document.body.appendChild(element);
+  element.value = textValue;
+  element.select();
+  document.execCommand("copy");
+  document.body.removeChild(element);
+  btn.classList.remove("fa-copy");
+  btn.classList.add("fa-check");
+
+  setTimeout(() => {
+    text.style.border = "none";
+    btn.classList.remove("fa-check");
+    btn.classList.add("fa-copy");
+  }, 2000);
+};
