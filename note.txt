@@ -1,0 +1,14 @@
+Requerments:
+01. Heard Reaction option dosn`t work.
+02. User profile picture doesn`t work.
+03. post description can not show if less then 30 caracter.
+04. User & user comment doesn`t show.
+05. if you click report button you have show others thing in report tab.
+06. like & report tab add item many time.
+
+#Bunus
+01. minumum 6 commit
+02. answer 3 question. minimun 5 line & maximum 10 line.
+01. how does javaScript work?
+02. what is javaScript event loop?
+03. Difference between local storage & session storage.
