@@ -4,7 +4,7 @@ Requerments:
 03. post description can not show if less then 30 caracter.(Done)
 04. User & user comment doesn`t show. (Done)
 05. if you click report button you have show others thing in report tab.(Done)
-06. like & report tab add item many time.
+06. like & report tab add item many time.(Done)
 
 #Bunus
 01. minumum 6 commit
