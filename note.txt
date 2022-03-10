@@ -1,7 +1,7 @@
 Requerments:
 01. Heard Reaction option dosn`t work. (Done)
 02. User profile picture doesn`t work. (Done)
-03. post description can not show if less then 30 caracter.
+03. post description can not show if less then 30 caracter.(Done)
 04. User & user comment doesn`t show.
 05. if you click report button you have show others thing in report tab.
 06. like & report tab add item many time.
