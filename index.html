@@ -96,16 +96,33 @@
           <div class="col-md-12 border p-2">
             <h3 class="py-2">Question-01: How does javaScript work?</h3>
             <div class="d-flex align-items-start bg-light p-2 rounded">
-              <p id="ans-one" class="p-2 rounded">
-                JavaScript is high-level, often, single-threaded, just-in-time
-                compiled, synchronous and multi-paradigm programming language.
-                Which means it can handle one task at a time and execute line by
-                line. But there have some functionality which is asynchronous.
-                to maintain this asynchronous task it has a single call stack.
-                this call stack is a data structure which racord which task run
-                fast and this call stack calls multiple functions. if one task
-                end then calls next function.
-              </p>
+              <div id="ans-one" class="p-2 rounded">
+                <p>
+                  JavaScript is a client side scripting language. It means
+                  JavaScript runs at the client-side, inside the web-browsers.
+                  help of javaScript Engine. So most important thing to remember
+                  is that client's web-browser also needs to support the
+                  JavaScript. Nowadays, most of the modern web browsers support
+                  JavaScript and have their JavaScript engines.
+                </p>
+                <p>Example:</p>
+                <ul>
+                  <li>
+                    01. Google Chrome has its own JavaScript engine called V8.
+                  </li>
+                  <li>02. Firefox Spidermonkey.</li>
+                  <li>03. Safari JavaScript Core</li>
+                </ul>
+                <p>
+                  Also JavaScript is single-threaded language it means
+                  JavaScript run only one operation at a time. But there has
+                  event loop which maintain long task.
+                </p>
+                <p>
+                  Conclusion: JavaScript work help of javaScript Engine (V8,
+                  Spidermonkey) Line by line synchronously.
+                </p>
+              </div>
               <button class="btn fs-3">
                 <i
                   onclick="copyElementText('ans-one',this)"
@@ -115,22 +132,34 @@
             </div>
             <h3 class="py-2">Question-02: what is javaScript event loop?</h3>
             <div class="d-flex align-items-start bg-light p-2 rounded">
-              <p id="ans-two" class="p-2 rounded">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                iusto debitis expedita ratione sit eveniet at, quia nobis
-                laudantium a. Fugit, illo excepturi molestias earum atque
-                consequatur explicabo minima culpa labore odit soluta facilis
-                repellendus velit provident debitis, quaerat fuga architecto
-                quia quae sed. Consequuntur quam harum in placeat labore. illo
-                excepturi molestias earum atque consequatur explicabo minima
-                culpa labore odit soluta facilis repellendus velit provident
-                debitis, quaerat fuga architecto quia quae sed. Consequuntur
-                quam harum in placeat labore illo excepturi molestias earum
-                atque consequatur explicabo minima culpa labore odit soluta
-                facilis repellendus velit provident debitis, quaerat fuga
-                architecto quia quae sed. Consequuntur quam harum in placeat
-                labore
-              </p>
+              <div id="ans-two" class="p-2 rounded">
+                <p>
+                  Javascript is single-threaded, it executes only one operation
+                  at a time. This process of executing we say javascript is
+                  synchronous and run only one operation at a time. But what
+                  happens when run long task to complete? This situation
+                  JavaScript complete long task help of event loop. behind the
+                  seans which mechanisms complete there long task called event
+                  loop. Now we discous this mechanisms (event loop).
+                </p>
+                <h5>JavaScript Engine</h5>
+                <p>
+                  Each browser has a Javascript runtime environment. the
+                  javascript runtime consists of Javascript Engine. this engine
+                  have a memory heap and a call stack.
+                </p>
+                <h5>Heap</h5>
+                <p>
+                  Memory heap is allocated every objects, functions or variables
+                  and stored in the heap.(means top).
+                </p>
+                <h5>Call stack</h5>
+                <p>
+                  The call stack read your javascript code and executed line by
+                  line.The call stack follows the First In Last principle, the
+                  function that is first added is executed last.
+                </p>
+              </div>
               <button class="btn fs-3">
                 <i
                   onclick="copyElementText('ans-two',this)"
@@ -145,9 +174,9 @@
             <div class="d-flex align-items-start bg-light p-2 rounded">
               <div id="ans-three" class="p-2 rounded">
                 <h6>
-                  SessionStorage and LocalStorage also used for storing the data
-                  on the client side. But there have some differences between
-                  local storage and session storage are given bellow:
+                  SessionStorage and LocalStorage used for storing the data on
+                  the client side. But there have some differences between local
+                  storage and session storage are given bellow:
                 </h6>
                 <table class="table table-striped">
                   <thead>
@@ -189,7 +218,7 @@
                         by the user when needed.
                       </td>
                       <td>
-                        The session storage data Limit 5MB Limited only by
+                        The session storage data Limit 5MB, Limited only by
                         system memory.
                       </td>
                     </tr>
