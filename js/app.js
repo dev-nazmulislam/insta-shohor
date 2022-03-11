@@ -1,5 +1,4 @@
 let posts = [];
-
 const likedPostsId = [];
 const reportedPostsId = [];
 
@@ -16,12 +15,14 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
+  // Extra work on like button start unlike option
   if (likedPostsId.includes(id)) {
     likedPostsId.splice(likedPostsId.indexOf(id), 1);
-    // Problem-01:There will be no plus, will push.(Done)
+    // Problem-01:There will be no plus, will be push.(Done)
   } else {
     likedPostsId.push(id);
   }
+  // Only show remaining post without reported post
   const remainingPosts = posts.filter(
     (post) => !reportedPostsId.includes(post.id)
   );
@@ -161,7 +162,7 @@ const showPosts = (posts) => {
 
 const displayLikedPosts = () => {
   const likePsotContainer = document.getElementById("liked");
-  // Problem-06: Clear previse liked post without defoult h1 tag. (Done)
+  // Problem-06: Clear previuse liked post without defoult h1 tag. (Done)
   while (likePsotContainer.children.length > 1) {
     likePsotContainer.removeChild(likePsotContainer.lastChild);
   }
@@ -174,7 +175,7 @@ const displayLikedPosts = () => {
 
 const displayReportedPosts = () => {
   const repotedPostContainer = document.getElementById("reported");
-  // Problem-06: Clear previse Reported post without defoult h1 tag. (Done)
+  // Problem-06: Clear previuse Reported post without defoult h1 tag. (Done)
   while (repotedPostContainer.children.length > 1) {
     repotedPostContainer.removeChild(repotedPostContainer.lastChild);
   }
