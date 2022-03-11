@@ -24,15 +24,15 @@
 
 > Javascript is single-threaded, it executes only one operation at a time. This process of executing we say javascript is synchronous and run only one operation at a time. But what happens when run long task to complete? This situation JavaScript complete long task help of event loop. behind the seans which mechanisms complete there long task called event loop. Now we discous this mechanisms (event loop).
 
-### JavaScript Engine
+#### JavaScript Engine
 
 > Each browser has a Javascript runtime environment. the javascript runtime consists of Javascript Engine. this engine have a memory heap and a call stack.
 
-### Heap
+#### Heap
 
 > Memory heap is allocated every objects, functions or variables and stored in the heap.(means top).
 
-### Call stack
+#### Call stack
 
 > The call stack read your javascript code and executed line by line.The call stack follows the First In Last principle, the function that is first added is executed last.
 
