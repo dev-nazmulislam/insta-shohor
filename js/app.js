@@ -16,12 +16,17 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
-  if (!likedPostsId.includes(id)) {
-    likedPostsId.push(id); // Problem-01:There will be no plus, will push.(Done)
+  if (likedPostsId.includes(id)) {
+    likedPostsId.splice(likedPostsId.indexOf(id), 1);
+    // Problem-01:There will be no plus, will push.(Done)
+  } else {
+    likedPostsId.push(id);
   }
-  showPosts(posts);
+  const remainingPosts = posts.filter(
+    (post) => !reportedPostsId.includes(post.id)
+  );
+  showPosts(remainingPosts);
 };
-
 const reportPost = (id) => {
   reportedPostsId.push(id);
   const remainingPosts = posts.filter(

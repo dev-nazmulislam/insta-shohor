@@ -94,7 +94,7 @@
             Web Development Interview Questions you have must know
           </h1>
           <div class="col-md-12 border p-2">
-            <h5 class="py-2">Question-01: How does javaScript work?</h5>
+            <h3 class="py-2">Question-01: How does javaScript work?</h3>
             <div class="d-flex align-items-start bg-light p-2 rounded">
               <p id="ans-one" class="p-2 rounded">
                 JavaScript is high-level, often, single-threaded, just-in-time
@@ -113,7 +113,7 @@
                 ></i>
               </button>
             </div>
-            <h5 class="py-2">Question-02: what is javaScript event loop?</h5>
+            <h3 class="py-2">Question-02: what is javaScript event loop?</h3>
             <div class="d-flex align-items-start bg-light p-2 rounded">
               <p id="ans-two" class="p-2 rounded">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
@@ -138,27 +138,64 @@
                 ></i>
               </button>
             </div>
-            <h5 class="py-2">
+            <h3 class="py-2">
               Question-03: What is Difference between local storage & session
               storage?
-            </h5>
+            </h3>
             <div class="d-flex align-items-start bg-light p-2 rounded">
-              <p id="ans-three" class="p-2 rounded">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                iusto debitis expedita ratione sit eveniet at, quia nobis
-                laudantium a. Fugit, illo excepturi molestias earum atque
-                consequatur explicabo minima culpa labore odit soluta facilis
-                repellendus velit provident debitis, quaerat fuga architecto
-                quia quae sed. Consequuntur quam harum in placeat labore. illo
-                excepturi molestias earum atque consequatur explicabo minima
-                culpa labore odit soluta facilis repellendus velit provident
-                debitis, quaerat fuga architecto quia quae sed. Consequuntur
-                quam harum in placeat labore illo excepturi molestias earum
-                atque consequatur explicabo minima culpa labore odit soluta
-                facilis repellendus velit provident debitis, quaerat fuga
-                architecto quia quae sed. Consequuntur quam harum in placeat
-                labore
-              </p>
+              <div id="ans-three" class="p-2 rounded">
+                <h6>
+                  SessionStorage and LocalStorage also used for storing the data
+                  on the client side. But there have some differences between
+                  local storage and session storage are given bellow:
+                </h6>
+                <table class="table table-striped">
+                  <thead>
+                    <tr class="text-center">
+                      <th>#</th>
+                      <th>Local storage</th>
+                      <th>Session storage</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>01</td>
+                      <td>
+                        The local Storage stores data parmanently, it has no
+                        expiry date.
+                      </td>
+                      <td>
+                        The session storage Stores data only for the duration of
+                        the session, when the user closes their browser the data
+                        is lost.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>
+                        The local storage data Cleared only via JavaScript code
+                        or clearing browser cache.
+                      </td>
+                      <td>
+                        The session storage data Cleared when browser closed.and
+                        there data uniq each browser tab.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>03</td>
+                      <td>
+                        The local storage data limit 5MB per app per browser.
+                        According to the HTML5 spec, this limit can be increased
+                        by the user when needed.
+                      </td>
+                      <td>
+                        The session storage data Limit 5MB Limited only by
+                        system memory.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <button class="btn fs-3">
                 <i
                   onclick="copyElementText('ans-three',this)"
